@@ -3,11 +3,11 @@
 
 A web-based application developed for **CVR College of Engineering** to streamline the management of faculty, courses, and assignments in a university environment.
 
-## 📌 Abstract
+## Abstract
 
 The **University Teacher Management System (TMS)** is designed to enhance how universities manage their teaching staff and academic activities. Built using modern web technologies like **ReactJS**, **NodeJS**, and **MySQL**, the system aims to deliver a user-friendly and efficient experience for both administrators and teachers.
 
-## 🚀 Features
+## Features
 
 - **User Accounts**
   - Secure login, registration, and password reset.
@@ -36,40 +36,32 @@ The **University Teacher Management System (TMS)** is designed to enhance how un
 - **Data Backup and Recovery**
   - Automatic backups and recovery options.
 
-## 👥 User Roles
+## User Roles
 
 - **Admin**: Manages teachers, courses, and overall system data.
 - **Faculty**: Manages their own profile and assignments.
 - **Student**: (Optional extension) Can view assignments and course information.
 
-## 💻 Tech Stack
+## Tech Stack
 
 - **Frontend**: ReactJS
 - **Backend**: NodeJS
 - **Database**: MySQL
 
-## 📷 Sample Designs
-
-> (You can insert screenshots or UI mockups here to showcase the design.)
 
 ## 🛠️ Setup Instructions
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/tms-project.git
-cd tms-project
+git clone https://github.com/saikowluru2005/Teacher-managment-system.git
 
 # Install dependencies for frontend and backend
-cd client
+cd backend
 npm install
 
-cd ../server
+cd ../frontend
 npm install
 
 # Start frontend and backend
-npm start  # in both folders or concurrently
+npm start
 ```
-
-## 📄 License
-
-This project is developed as part of an academic requirement and is open for educational use.
