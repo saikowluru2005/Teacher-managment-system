@@ -12,8 +12,9 @@ import {
     getFailed,
     getError,
 } from './userSlice';
+const REACT_APP_BASE_URL = "http://localhost:5000";
 
-export const loginUser = (fields, role) => async (dispatch) => {
+export const loginUser = (fields, role) => async(dispatch) => {
     dispatch(authRequest());
 
     try {
@@ -30,7 +31,7 @@ export const loginUser = (fields, role) => async (dispatch) => {
     }
 };
 
-export const registerUser = (fields, role) => async (dispatch) => {
+export const registerUser = (fields, role) => async(dispatch) => {
     dispatch(authRequest());
 
     try {
@@ -39,11 +40,9 @@ export const registerUser = (fields, role) => async (dispatch) => {
         });
         if (result.data.schoolName) {
             dispatch(authSuccess(result.data));
-        }
-        else if (result.data.school) {
+        } else if (result.data.school) {
             dispatch(stuffAdded());
-        }
-        else {
+        } else {
             dispatch(authFailed(result.data.message));
         }
     } catch (error) {
@@ -55,7 +54,7 @@ export const logoutUser = () => (dispatch) => {
     dispatch(authLogout());
 };
 
-export const getUserDetails = (id, address) => async (dispatch) => {
+export const getUserDetails = (id, address) => async(dispatch) => {
     dispatch(getRequest());
 
     try {
@@ -84,12 +83,12 @@ export const getUserDetails = (id, address) => async (dispatch) => {
 // }
 
 
-export const deleteUser = (id, address) => async (dispatch) => {
+export const deleteUser = (id, address) => async(dispatch) => {
     dispatch(getRequest());
     dispatch(getFailed("Sorry the delete function has been disabled for now."));
 }
 
-export const updateUser = (fields, id, address) => async (dispatch) => {
+export const updateUser = (fields, id, address) => async(dispatch) => {
     dispatch(getRequest());
 
     try {
@@ -98,8 +97,7 @@ export const updateUser = (fields, id, address) => async (dispatch) => {
         });
         if (result.data.schoolName) {
             dispatch(authSuccess(result.data));
-        }
-        else {
+        } else {
             dispatch(doneSuccess(result.data));
         }
     } catch (error) {
@@ -107,7 +105,7 @@ export const updateUser = (fields, id, address) => async (dispatch) => {
     }
 }
 
-export const addStuff = (fields, address) => async (dispatch) => {
+export const addStuff = (fields, address) => async(dispatch) => {
     dispatch(authRequest());
 
     try {

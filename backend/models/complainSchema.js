@@ -13,6 +13,7 @@ const complainSchema = new mongoose.Schema({
     complaint: {
         type: String,
         required: true
+        
     },
     school: {
         type: mongoose.Schema.Types.ObjectId,
